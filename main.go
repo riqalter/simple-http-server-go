@@ -10,12 +10,9 @@ import (
 )
 
 
-func main(){
-	// ganti sendiri2 ye
-	defaultDirectory := "/home/riq/src/test"
-
+func main() {
 	// directory nya
-	dir := flag.String("dir", defaultDirectory, "the directory of static file to host")
+	dir := flag.String("dir", ".", "the directory of static file to host")
 	flag.Parse()
 
 	// port nya
@@ -25,8 +22,7 @@ func main(){
 	// working directory
 	absDir, err := filepath.Abs(*dir)
 	if err != nil {
-		log.Fatal("Could not determine the absolute path of directory %s", *dir)
-
+		log.Fatalf("Could not determine the absolute path of directory %s", *dir)
 	}
 
 	// file server handler

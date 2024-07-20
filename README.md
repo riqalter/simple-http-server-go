@@ -21,7 +21,7 @@ cd simple-http-server-go
 
 ## Usage
 
-To run the server with default settings (port 8000, current directory):
+To run the server with default settings (port 9000, current directory):
 
 ```
 go run main.go
@@ -30,7 +30,7 @@ go run main.go
 To specify a custom port:
 
 ```
-go run main.go -port 9000
+go run main.go -port 42
 ```
 
 To specify a custom directory to serve files from:
@@ -49,14 +49,26 @@ go run main.go -port 9000 -dir /path/to/your/directory
 
 To build an executable:
 
+(MacOS/Linux)
 ```
 go build -o simplehttpserver main.go
 ```
 
+(Windows)
+```
+go build -o simplehttpserver.exe main.go
+```
+
 This will create an executable file that you can run directly:
 
+(MacOS/Linux)
 ```
-./simplehttpserver -port 9000 -dir /path/to/your/directory
+./simplehttpserver -port 42 -dir /path/to/your/directory
+```
+
+(Windows)
+```
+./simplehttpserver.exe -port 666 -dir /path/to/your/directory
 ```
 
 ## Acknowledgments
