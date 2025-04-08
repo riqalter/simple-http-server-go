@@ -9,6 +9,8 @@ Simple HTTP Server is a lightweight HTTP server written in Go, designed to mimic
 - Customizable directory to serve files from
 - Easy to use command-line interface
 - Cross-platform compatibility
+- Verbose mode to log requests in the console
+- Media viewing support (images, videos, etc.)
 
 ## Installation
 
@@ -31,6 +33,12 @@ To specify a custom port:
 
 ```
 go run main.go -port 42
+```
+
+To make it verbose (show requests in the console):
+
+```
+go run main.go -v
 ```
 
 To specify a custom directory to serve files from:
